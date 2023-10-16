@@ -5,7 +5,7 @@ export const defaultPrompts = [
         description: 'Summarize the conversation',
         content: 'Summarize the conversation',
         model: {
-            id: "gpt-3.5-turbo",
+            id: "gpt-35-turbo",
             name: "GPT-3.5",
             maxLength: 12000,
             tokenLimit: 4000
@@ -18,7 +18,7 @@ export const defaultPrompts = [
         description: 'Explains code provided by the user',
         content: 'Explain the following code:\\n',
         model: {
-            id: "gpt-3.5-turbo",
+            id: "gpt-35-turbo",
             name: "GPT-3.5",
             maxLength: 12000,
             tokenLimit: 4000
