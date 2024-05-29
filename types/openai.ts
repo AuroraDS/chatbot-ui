@@ -1,4 +1,3 @@
-import { OPENAI_API_TYPE } from '../utils/app/const';
 
 export interface OpenAIModel {
   id: string;
@@ -12,10 +11,11 @@ export enum OpenAIModelID {
   GPT_3_5_16K = 'gpt-35-turbo-16k',
   GPT_4 = 'gpt-4',
   GPT_4_32K = 'gpt-4-32k',
+  GPT_4o = 'gpt-4o',
 }
 
 // in case the `DEFAULT_MODEL` environment variable is not set or set to an unsupported model
-export const fallbackModelID = OpenAIModelID.GPT_3_5;
+export const fallbackModelID = OpenAIModelID.GPT_4o;
 
 export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
   [OpenAIModelID.GPT_3_5]: {
@@ -41,5 +41,11 @@ export const OpenAIModels: Record<OpenAIModelID, OpenAIModel> = {
     name: 'GPT-4-32K',
     maxLength: 96000,
     tokenLimit: 32768,
+  },
+  [OpenAIModelID.GPT_4o]: {
+    id: OpenAIModelID.GPT_4o,
+    name: 'GPT-4o',
+    maxLength: 128000,
+    tokenLimit: 128000,
   },
 };
