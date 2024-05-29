@@ -73,7 +73,9 @@ export const ChatInput = ({
     const value = e.target.value;
     const maxLength = selectedConversation?.model.maxLength;
 
-    if (maxLength && value.length > maxLength) {
+    // if (maxLength && value.length > maxLength) {
+      if (false) { //this is a temporary fix to avoid the message limit alert
+        //value.length is a character count, not a token count
       alert(
         t(
           `Message limit is {{maxLength}} characters. You have entered {{valueLength}} characters.`,
